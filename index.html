@@ -39,18 +39,24 @@
           { email: 'user@example.com', password: 'user123', role: 'user' }
         ];
 
+        console.log('User authentication attempt:', { email, password });
+
         const user = users.find(u => u.email === email && u.password === password);
 
         if (user) {
-          // Redirect to dashboard based on user role
+          console.log('User found:', user);
+          // Redirect to the corresponding dashboard based on user role
           if (user.role === 'admin') {
+            console.log('Redirecting to admin dashboard...');
             window.location.href = '/admin-dashboard.html';
           } else {
             // Redirect to other role-specific dashboards
             // Example: window.location.href = '/user-dashboard.html';
+            console.log('User role is not admin, redirecting to user dashboard...');
           }
         } else {
           alert('Invalid email or password');
+          console.log('Invalid login attempt');
         }
       });
     </script>
