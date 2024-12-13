@@ -1,11 +1,23 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Home Container Styling */
 .home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #007bff;
-    color: white;
+    flex-grow: 1; /* Push footer to the bottom */
+    background-color: #1e4775;
+    color: #e7e5e5;
     text-align: center;
     padding: 20px;
 }
@@ -13,23 +25,78 @@
 .home-container h1 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: #e7e5e5; /* Text color */
 }
 
 .home-container p {
     font-size: 18px;
     margin-bottom: 40px;
+    color: #d56918; /* Accent color */
 }
 
 .home-container button {
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
-    background-color: #ffffff;
-    color: #007bff;
+    background-color: #e7e5e5;
+    color: #1e4775;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .home-container button:hover {
-    background-color: #f0f0f0;
+    background-color: #d56918;
+    color: #ffffff; /* White for better contrast on hover */
+}
+
+/* Footer Styling */
+.home-footer {
+    background-color: #1e4775;
+    color: #e7e5e5;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.home-footer .brand-highlight {
+    color: #d56918;
+    font-weight: bold;
+}
+
+.home-footer {
+    background-color: #1e4775;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.brand-highlight {
+    font-weight: bold;
+    color: #d56918;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container h1 {
+        font-size: 28px;
+    }
+
+    .home-container p {
+        font-size: 16px;
+    }
+
+    .home-container button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .home-footer {
+        font-size: 12px;
+    }
 }

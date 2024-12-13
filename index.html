@@ -1,15 +1,58 @@
-<!doctype html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Updated favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="App.css">
     <title>Mediku</title>
+    <link rel="stylesheet" href="App.css" />
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root">
+      <div class="card">
+        <h1>Welcome to Mediku</h1>
+        <p>Please log in to continue.</p>
+        <form id="login-form">
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+    <script src="/src/main.jsx" type="module"></script>
+
+    <footer class="home-footer">
+      <p>Developed and Secured by <span class="brand-highlight"> ZeroX </span></p>
+    </footer>
+
+    <script>
+      document.getElementById('login-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Simulated user data for authentication
+        const users = [
+          { email: 'admin@example.com', password: 'admin123', role: 'admin' },
+          { email: 'user@example.com', password: 'user123', role: 'user' }
+        ];
+
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+          // Redirect to dashboard based on user role
+          if (user.role === 'admin') {
+            window.location.href = '/admin-dashboard.html';
+          } else {
+            // Redirect to other role-specific dashboards
+            // Example: window.location.href = '/user-dashboard.html';
+          }
+        } else {
+          alert('Invalid email or password');
+        }
+      });
+    </script>
   </body>
 </html>

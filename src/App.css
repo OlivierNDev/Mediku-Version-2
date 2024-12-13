@@ -4,12 +4,12 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif; /* Update to your preferred font */
+  font-family: Arial, sans-serif;
 }
 
 /* Set a full-screen background color */
 body {
-  background-color: #007bff; /* Adjust to your desired background color */
+  background-color: #1e4775; /* Updated to desired background color */
 }
 
 /* Container to span full width and height */
@@ -24,20 +24,45 @@ body {
 
 /* Card or main content container */
 .card {
-  background-color: #007bff; /* Blue background for card */
-  color: white;
+  background-color: #ffffff; /* White background for the card */
+  color: #1e4775; /* Text color to match theme */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Adjust width to your liking */
-  max-width: 1200px; /* Prevent excessive width */
+  width: 90%;
+  max-width: 600px; /* Adjust width for smaller cards */
   text-align: center;
 }
 
+
+
+
+
+
+.home-footer {
+  background-color: #1e4775;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.brand-highlight {
+  font-weight: bold;
+  color: #d56918;
+}
+
+
+
+
+
 /* Button styling */
 button {
-  background-color: #ffffff;
-  color: #007bff;
+  background-color: #1e4775;
+  color: #ffffff;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -48,5 +73,19 @@ button {
 }
 
 button:hover {
-  background-color: #e0e0e0;
+  background-color: #163956;
+}
+
+
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
 }
