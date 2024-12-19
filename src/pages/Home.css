@@ -64,21 +64,6 @@ body, html {
     font-weight: bold;
 }
 
-.home-footer {
-    background-color: #1e4775;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-}
-
-.brand-highlight {
-    font-weight: bold;
-    color: #d56918;
-}
 
 
 /* Responsive Design */
